@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kana Practice</title>
+        <meta name="description" content="Practice typing hiragana and katakana.">
+        <meta name="keywords" content="type japanese, type hiragana, type katakana">
+        <meta name="author" content="Glacialz">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="googlebot" content="notranslate">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div id="main-grid">
+            <div id="kana-field">
+                <div style="color: white;">ハハハハハハハハハハハハハハハハハハハハハハハハハハハハハハ</div>
+            </div>
+            <input type="text" id="romaji-input" aria-label="input box (romaji)" autofocus/>
+            <div id="spoiler">
+                <button class="accordion hide">Hide</button>
+                <div id="options" style="display: flex;">
+                    <div class="container">
+                        <div class="buttons">
+                            <button class="btn-class" style="background: rgb(177, 255, 157);" value="hiragana">Hiragana</button>
+                            <button class="btn-class" value="katakana">Katakana</button>
+                            <button class="btn-class" value="allKana">Both</button>
+                            <button class="btn-class" value="lookAlikes">Similar Looking Kana</button>
+                        </div>
+                        <div id="lines">
+                            <label id="numKana" for="numberOfKana">Number of Kana Per Line</label>
+                            <select name="numberOfKana" id="numberOfKana">
+                                <option value="1">1</option>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30" selected>30</option>
+                            </select>
+                        </div>
+                    </div>
+                    <ul id="tips">
+                        <li>Enter hiragana with lowercase letters (romaji). ha → は</li>
+                        <li>Enter katakana with uppercase letters (romaji). HA → ハ</li>
+                        <li>ん and ン are entered as "nn" and "NN" respectively.</li>
+                        <li>Hover over a kana to see its reading.</li>
+                        <li>Similar looking kana only contains kana that are often confused such as ツ and シ.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

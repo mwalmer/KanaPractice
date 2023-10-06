@@ -1,0 +1,176 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 30px;
+    font-family: arial;
+    background: rgb(247, 234, 255);
+}
+
+#main-grid {
+    margin: 100px 50px 0px 50px;
+    display: grid;
+    height: auto;
+    width: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    align-items: center;
+    justify-items: center;
+}
+
+#kana-field {
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    box-shadow: 0px 0px 3px 1px lightgrey;
+}
+
+@media screen and (max-width: 500px) {
+    #main-grid {
+        margin: auto;
+        padding: 2px 2px 0 2px;
+        grid-template-rows: 1fr auto auto;
+        row-gap: 10px;
+    }
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 28px;
+    column-gap: 4px;
+    margin: 0;
+    padding: 0;
+}
+
+.currentKana {
+    border-bottom: 1px dotted black;
+}
+
+.correct {
+    color: rgb(29, 196, 49);
+}
+
+.wrong {
+    color: rgb(196, 19, 49);
+}
+
+#romaji-input {
+    background: rgb(255, 255, 255);
+    border-width: 1px;
+    padding: 1px 0 1px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+#romaji-input:focus {
+    outline-width: 0px;
+    box-shadow: 0px 0px 1px 1px rgb(172, 172, 172);
+}
+
+#spoiler {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.accordion {
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+    border-width: 1px;
+    border-radius: 0px;
+    border-style: solid;
+    border-color: black;
+    padding: 10px 10px;
+    text-align: center;
+    outline: none;
+}
+  
+.active {
+    background-color: rgb(177, 255, 157);
+}
+  
+#options {
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.btn-class {
+    background: white;
+    border-style: solid;
+    border-radius: 0px;
+    border-width: 1px;
+    border-color: black;
+    outline: none;
+    font-size: 14px;
+}
+
+#tips {
+    margin: 2rem;
+    font-size: 20px;
+    color: rgb(95, 95, 95);
+}
+
+#lines {
+    text-align: center;
+    text-justify: center;
+    width: auto;
+    border-style: solid;
+    border-color: black;
+    border-radius: 0px;
+    border-width: 1px;
+    padding-top: 3.5px;
+    padding-bottom: 3.5px;
+    margin: 5px 0;
+    background: white;
+    font-size: 14px;
+}
+
+.container {
+    margin-top: 5px;
+    width: 367px;
+}
+
+.hide {
+    padding: 10px 19.5px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-color: lightgray;
+    border-radius: 0px;
+    border-width: 1px;
+    border-style: solid;
+
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+#numberOfKana {
+    border: 0;
+    border-left: 1px solid black;
+}
